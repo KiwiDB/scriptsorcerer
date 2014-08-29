@@ -1,0 +1,70 @@
+svg.radar-badge
+{
+}
+
+svg.radar-badge circle.radar-bg
+{
+	fill: black;
+	stroke: #999;
+	stroke-width: 2;
+}
+
+svg.radar-badge g.radar-levels
+{
+	fill: none;
+	stroke: white;
+	stroke-width: 1;
+}
+
+svg.radar-badge circle.radar-centerdot
+{
+	fill: white;
+}
+
+svg.radar-badge g.radar-labels
+{
+	fill: black;
+	font-size: 16px;
+}
+
+svg.radar-badge g.radar-labels text.left
+{
+	text-anchor: start;
+}
+
+svg.radar-badge g.radar-labels text.right
+{
+	text-anchor: end;
+}
+
+svg.radar-badge g.radar-labels text.middle
+{
+	text-anchor: middle;
+}
+
+svg.radar-badge path.radar-badgeset
+{
+	stroke-linejoin: round;
+	fill: yellow;
+	stroke-width: 1;
+	stroke: #34799E;
+	opacity: 0.7;
+}
+
+svg.radar-badge g.radar-points
+{
+	fill: #B3B00C;
+	stroke: #fff;
+	stroke-width: 1;
+	opacity: 0.7;
+}
+
+svg.radar-badge .radar_highlight
+{
+	fill: red;
+}
+
+.radardata
+{
+	display: none;
+}

@@ -1,0 +1,1076 @@
+<html>
+	<head>
+		<title>John L. Erdei Portfolio</title>
+
+		<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+		<meta name="viewport" content="width=device-width" />
+
+		<!-- FONTS -->
+		<link href='http://fonts.googleapis.com/css?family=PT+Sans' rel='stylesheet' type='text/css'>
+
+		<!-- FAVICON -->
+		<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+
+		<!-- CSS -->
+		<link href="jquery/radarbadge/jquery.radarbadge.min.css" rel="stylesheet">
+		<link href="jquery/bxslider/jquery.bxslider.css" rel="stylesheet">
+		<link href="timeline.css" rel="stylesheet">
+		<link href="style.css" rel="stylesheet">
+
+		<!-- JAVASCRIPT -->
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+		<script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.11.1/jquery-ui.min.js"></script>	<!-- required for jQuery animate to work with opacity and color -->
+		<script type="text/javascript" src="detectmobilebrowser.js"></script>
+
+		<script type="text/javascript" src="jquery/radarbadge/jquery.radarbadge.js"></script>
+		<script type="text/javascript" src="jquery/jquery.easing.1.3.js"></script>
+		<script type="text/javascript" src="jquery/jquery.scrollTo-1.4.3.1-min.js"></script>
+		<script type="text/javascript" src="jquery/bxslider/jquery.bxslider.min.js"></script>
+
+		<script type="text/javascript" src="scripts.js"></script>
+		<script type="text/javascript" src="game.js"></script>
+	</head>
+
+	<body style='overflow:hidden;'>
+		<div id='loadBar'>
+			<div class='loadMessage'>Optimizing For Your Browser</div>
+			<div class='loadImage'><img src='images/load.gif' /></div>
+		</div>
+
+		<div class='hide-before-ready' style='opacity: 0'>
+
+			<!-- TOP NAV -->
+			<nav id='top-menu' style='background-color: rgba(52, 121, 158, 0)'>
+				<div class='menu-logo'><a href='javascript:void(0)' onclick='moveToSection("top");'>John L. Erdei</a></div>
+				<div class='menu-items-container'>
+					<ul class='menu-items'>
+						<li><a href='javascript:void(0)' onclick='moveToSection("quick");'>Services</a></li>
+						<li><a href='javascript:void(0)' onclick='moveToSection("testimonials");'>Testimonials</a></li>
+						<li><a href='javascript:void(0)' onclick='moveToSection("portfolio");'>Portfolio</a></li>
+						<li><a href='javascript:void(0)' onclick='moveToSection("awards");'>Recognition</a></li>
+						<li><a href='javascript:void(0)' onclick='moveToSection("interests");'>Interests</a></li>
+						<li><a href='javascript:void(0)' onclick='moveToSection("skills");'>Skills</a></li>
+						<li><a href='javascript:void(0)' onclick='moveToSection("timeline");'>Timeline</a></li>
+						<li><a href='javascript:void(0)' onclick='moveToSection("game");'>Game</a></li>
+						<li><a href='javascript:void(0)' onclick='moveToSection("contact");'>Contact</a></li>
+					</ul>
+				</div>
+				<div class='menu-icon' onclick='showMobileMenu()'><span data-icon='&#xe606;'></span></div>
+			</nav>
+
+			<!-- Top Image -->
+			<div id='top-image' class='parallax'>
+				<div class='overlay'>
+					<div id='top-info'>
+						<div class='titlecard top-message'>
+							<h1>John L. Erdei</h1>
+							<h2>Web Developer</h2>
+							<h3>Dayton, Ohio</h3>
+
+							<div class='externallinks'>
+								<div class='linkedin'>
+									<a href='http://www.linkedin.com/in/kiwidb' target='_blank'><img src='images/logos/linkedin.png' title='LinkedIn' /></a>
+								</div>
+								<div class='github'>
+									<a href='https://github.com/kiwidb' target='_blank'><img src='images/logos/github.png' title='GitHub' /></a>
+								</div>
+								<div class='github-b'>
+									<a href='https://github.com/kiwidb' target='_blank'><img src='images/logos/github-b.png' title='GitHub' /></a>
+								</div>
+								<div class='resume'>
+									<a href='documents/2014 Resume.pdf' target='_blank'><span data-icon='&#xe609;' title='Resume'></span></a>
+								</div>
+							</div>
+						</div>
+
+						<div class='slider-container'>
+							<div class='top-slider slider'>
+								<div class='quote'>"John is always pleasure to work with"</div>
+								<div class='quote'>"He is a great when working with UI designers"</div>
+								<div class='quote'>"You rock"</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+
+			<div id='main-container'>
+				<div id='main-content-area'>
+
+					<!-- Top border "gradient" -->
+					<div class='top-border-container'><div class='top-border-cell'></div><div class='top-border-cell'></div><div class='top-border-cell'></div><div class='top-border-cell'></div><div class='top-border-cell'></div></div>
+
+					<!-- Top quick section -->
+					<section id='quick' class='scroll-quick'>
+						<div class='table two-table'>
+							<div class='table-row'>
+								<article class='table-cell'>
+									<div class='icon'><span data-icon='&#xe605;'></span></div>
+									<div class='desc'>
+										<h4>Nine Years Experience</h4>
+									</div>
+								</article>
+								<article class='table-cell'>
+									<div class='icon'><span data-icon='&#xe604;'></span></div>
+									<div class='desc'>
+										<h4>B.S. Computer Science</h4>
+									</div>
+								</article>
+							</div>
+						</div>
+
+						<div class='table four-table'>
+							<div class='table-row'>
+								<article class='table-cell'>
+									<div class='icon'><span data-icon='&#xe600;'></span></div>
+									<div class='desc'>
+										<h4>Web Development</h4>
+										Frontend and Backend
+									</div>
+								</article>
+								<article class='table-cell'>
+									<div class='icon'><span data-icon='&#xe601;'></span></div>
+									<div class='desc'>
+										<h4>Website Design</h4>
+										Responsive CSS3
+									</div>
+								</article>
+								<article class='table-cell'>
+									<div class='icon'><span data-icon='&#xe603;'></span></div>
+									<div class='desc'>
+										<h4>CMS</h4>
+										Wordpress and Joomla Expert
+									</div>
+								</article>
+								<article class='table-cell'>
+									<div class='icon'><span data-icon='&#xe602;'></span></div>
+									<div class='desc'>
+										<h4>Cloud</h4>
+										AWS, SOAP, REST
+									</div>
+								</article>
+							</div>
+						</div>
+					</section>	<!-- /#quick -->
+
+					<!-- Top service blocks -->
+					<section id='service-blocks'>
+						<article id='desdev'>
+							<div class='table overlay'>
+								<div class='table-row'>
+									<div class='table-cell left'>
+										<div>
+											<h3>Web Development</h3>
+											<p>I am a PHP master. In my 9 years of experience I've built or worked on systems big and small, on my own and as part of a team. From file handling systems and image manipulation using GD to media playback and anything else we can think of, let's make it happen!</p>
+										</div>
+										<div>
+											<h3>Web Design</h3>
+											<p>I built my first website in 8th grade, and I was hooked. Since then I've built websites for family and friends, for schools and for companies. Using a CMS or straight HTML, I can generate modern, responsive designs and turn them into reality.</p>
+										</div>
+									</div>
+									<div class='table-cell right'>
+										<div class='slider-img'>
+											<img src='images/sections/devdes/infopage.png' class='shadow' />
+											<img src='images/sections/devdes/golives.png' class='shadow' />
+											<img src='images/sections/devdes/mcrib.png' class='shadow' />
+											<img src='images/sections/devdes/hobsonsu.png' class='shadow' />
+											<img src='images/sections/devdes/it.png' class='shadow' />
+											<img src='images/sections/devdes/points.png' class='shadow' />
+											<img src='images/sections/devdes/hiwirecalendar.png' class='shadow' />
+										</div>
+									</div>
+								</div>
+							</div>
+						</article>
+						<article id='autoint'>
+							<div class='overlay'>
+								<div class='row'>
+									<div>
+										<h3>Automation &amp; Integration</h3>
+										<p>Early on in my career I found a niche creating tools to automate tasks and to integrate systems. Using scripts that read from and write to Excel documents, that consume web services, that query databases, I've substantially increased efficiency and output of teams across organizations.</p>
+									</div>
+								</div>
+								<div class='row'>
+									<img src='images/sections/auto/ipcreate.png' />
+								</div>
+								<div style='clear:both'></div>
+							</div>
+						</article>
+					</section>	<!-- /#service-blocks -->
+
+					<!-- Testimonials -->
+					<section id='testimonials'>
+						<article class='scroll-testimonials'>
+							<div class='title'>
+								<h3>Testimonials</h3>
+								<h4>What they say</h4>
+							</div>
+							<div class='quote-blocks'>
+								<div class='quote-block'>
+									<figure>
+										<img src="images/quotes/sami.png" />
+									</figure>
+									<blockquote>
+										<p>John is always pleasure to work with, his ideas are both innovative, and intuitive, while taking into consideration scale, and supportability. He always goes above and beyond what is asked of him, and I could not recommend anyone more highly as a developer.</p>
+
+										<cite>Sami Van Ness &mdash; Owner, Pixel Conversions LLC [<a href='http://www.linkedin.com/in/pixelconversions' target='_blank'>link</a>]</cite>
+									</blockquote>
+								</div>
+								<div class='quote-block'>
+									<figure>
+										<img src="images/quotes/vanessa.png" />
+									</figure>
+									<blockquote>
+										<p>John is a very talented and creative developer. He and I have had the pleasure of building many web pages and web products together. He is a great when working with UI designers and tends to compliment our skill set well.</p>
+
+										<cite>Vanessa Keeton &mdash; Front End Web Engineer, Sentry Data Systems [<a href='http://www.linkedin.com/pub/vanessa-keeton/4b/b1b/204' target='_blank'>link</a>]</cite>
+									</blockquote>
+								</div>
+								<div class='quote-block'>
+									<figure>
+										<img src="images/quotes/james.png" />
+									</figure>
+									<blockquote>
+										<p>You are a lifesaver. You rock</p>
+
+										<cite>James Ebert &mdash; Front End Development &amp; Configuration Services Specialist, Hobsons [<a href='http://www.linkedin.com/in/jamesebert' target='_blank'>link</a>]</cite>
+									</blockquote>
+								</div>
+								<div class='quote-block'>
+									<figure>
+										<img src="images/quotes/ryan.png" />
+									</figure>
+									<blockquote>
+										<p>I've had the pleasure of working with John for over 6 years now. He has held a variety of roles during this time, but the consistency of his work has never changed. John is detailed, efficient, creative, customer focused, and, most importantly, accurate! Any project or task that John handles always comes back exceeding expectations.</p>
+
+										<cite>Ryan Thornley &mdash; Manager, Implementation, Hobsons [<a href='http://www.linkedin.com/in/rthornley' target='_blank'>link</a>]</cite>
+									</blockquote>
+								</div>
+								<div class='quote-block'>
+									<figure>
+										<img src="images/quotes/matt.png" />
+									</figure>
+									<blockquote>
+										<p>John lead the development and roll out of a web app used to manage event registration for our local EMEA users conference.  John went above and beyond in understanding the needs for our event and also put forward his own innovative ideas to improve the registration process.  John didn't stop once the web app was complete and in use, he was dedicated to its success on the day of the event and worked modified hours to align with the UK based event to ensure there were no major hurdles that came up during registration.  I would love to work with John on another development project in the future.</p>
+
+										<cite>Matt McKillen &mdash; Implementation Specialist, Hobsons (UK) [<a href='http://uk.linkedin.com/in/mattmckillen' target='_blank'>link</a>]</cite>
+									</blockquote>
+								</div>
+								<div class='quote-block'>
+									<figure>
+										<img src="images/quotes/anu.png" />
+									</figure>
+									<blockquote>
+										<p>John is a proactive and tireless contributor. He continues to impress all of us by transforming what might appear as repetitive system set up work into quick and easy tasks with the help of tools that expedite many processes. In my experience with John, he always completed his assignments on time and never failed to add a creative touch when appropriate. He naturally rises to the occasion when presented with something he is passionate about.</p>
+
+										<cite>Anu Burns &mdash; Implementation Specialist, Hobsons [<a href='http://www.linkedin.com/pub/anu-singh/21/268/a4b' target='_blank'>link</a>]</cite>
+									</blockquote>
+								</div>
+								<div class='quote-block'>
+									<figure>
+										<img src="images/quotes/craig.png" />
+									</figure>
+									<blockquote>
+										<p>John really brought this project to life, taking the production concepts presented to him and transforming them into a unique, innovative web application. Beyond that, John took the time to further extend the application by moving extensible parts of the process into a user-editable configuration file. Really clever, forward-thinking work!</p>
+
+										<cite>Craig Rahtz &mdash; Senior New Media Developer, Hobsons [<a href='http://www.linkedin.com/in/craigrahtz' target='_blank'>link</a>]</cite>
+									</blockquote>
+								</div>
+								<div class='quote-block'>
+									<figure>
+										<img src="images/quotes/riker.png" />
+									</figure>
+									<blockquote>
+										<p>Captain, why are we out here chasing comets? Fear is the true enemy, the only enemy. We know you're dealing in stolen ore. But I wanna talk about the assassination attempt on Lieutenant Worf.</p>
+
+										<cite>Cmdr. Will Riker &mdash; First Officer, U.S.S. Enterprise</cite>
+									</blockquote>
+								</div>
+							</div>
+						</article>
+					</section>	<!-- /#testimonials -->
+
+					<!-- Portfolio -->
+					<section id='portfolio'>
+
+						<!-- Sites - full banner -->
+						<article class='sites-full scroll-portfolio'>
+							<div class='title'>
+								<h3>Selected Portfolio</h3>
+								<h4>What I've Done</h4>
+							</div>
+<!--
+							<div class='site-banner'>
+								<figure>
+									<img src='images/sites/banners/asmr-addict.png' />
+								</figure>
+								<div class='table details'>
+									<div class='table-row'>
+										<div class='table-cell info'>
+											<h4>ASMR Addicts</h4>
+											<p>A Wordpress based blog, including custom SEO and AdSense ads.</p>
+										</div>
+										<div class='table-cell actions'>
+											<a href='javascript:void(0)' rel="site-banners" title='View Details' onclick='showSiteDetails("asmraddicts.html");'><span data-icon='&#xe608;'></span></a>
+											<a href='http://asmr-addict.com' target='_blank' title='Open Site'><span data-icon='&#xe607;'></span></a>
+										</div>
+									</div>
+								</div>
+							</div>
+-->
+<!--
+							<div class='site-banner'>
+								<figure>
+									<img src='images/sites/banners/kolibri.png' />
+								</figure>
+								<div class='table details'>
+									<div class='table-row'>
+										<div class='table-cell info'>
+											<h4>KolibriTech</h4>
+											<p>A Wordpress blog I was asked to set up. I created a custom template, added and customized Wordpress plugins.</p>
+										</div>
+										<div class='table-cell actions'>
+											<a href='javascript:void(0)' rel="site-banners" title='View Details' onclick='showSiteDetails("kolibritech.html");'><span data-icon='&#xe608;'></span></a>
+											<a href='http://kolibritech.com' target='_blank' title='Open Site'><span data-icon='&#xe607;'></span></a>
+										</div>
+									</div>
+								</div>
+							</div>
+-->
+							<div class='site-banner'>
+								<figure>
+									<img src='images/sites/banners/omw.png' />
+								</figure>
+								<div class='table details'>
+									<div class='table-row'>
+										<div class='table-cell info'>
+											<h4>Ohio Mid-Western College</h4>
+											<p>The hero site for Ohio Mid-Western College</p>
+										</div>
+										<div class='table-cell actions'>
+											<a href='javascript:void(0)' rel="site-banners" title='View Details' onclick='showSiteDetails("omw.html");'><span data-icon='&#xe608;'></span></a>
+											<!--<a href='http://omw.edu' target='_blank' title='Open Site'><span data-icon='&#xe607;'></span></a>-->
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<div class='site-banner'>
+								<figure>
+									<img src='images/sites/banners/owl.png' />
+								</figure>
+								<div class='table details'>
+									<div class='table-row'>
+										<div class='table-cell info'>
+											<h4>The OWL Group Microsite</h4>
+											<p>A marketing microsite for The Online Western New York Learning Alliance (The OWL Group)</p>
+										</div>
+										<div class='table-cell actions'>
+											<a href='javascript:void(0)' rel="site-banners" title='View Details' onclick='showSiteDetails("owl.html");'><span data-icon='&#xe608;'></span></a>
+											<a href='http://programs.owlwny.org' target='_blank' title='Open Site'><span data-icon='&#xe607;'></span></a>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<div class='site-banner'>
+								<figure>
+									<img src='images/sites/banners/hobsonsu.png' />
+								</figure>
+								<div class='table details'>
+									<div class='table-row'>
+										<div class='table-cell info'>
+											<h4>Hobsons U Breakout Session Manager</h4>
+											<p>A custom solution developed to manage registrations for a conference</p>
+										</div>
+										<div class='table-cell actions'>
+											<a href='javascript:void(0)' rel="site-banners" title='View Details' onclick='showSiteDetails("hobsonsu.html");'><span data-icon='&#xe608;'></span></a>
+											<a href='http://apps.askadmissions.net/hobsonsu/emea' target='_blank' title='Open Site'><span data-icon='&#xe607;'></span></a>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<div class='site-banner'>
+								<figure>
+									<img src='images/sites/banners/it.png' />
+								</figure>
+								<div class='table details'>
+									<div class='table-row'>
+										<div class='table-cell info'>
+											<h4>Jira Issue Tracker Custom Front-End</h4>
+											<p>A custom Jira Issue Tracker frontend</p>
+										</div>
+										<div class='table-cell actions'>
+											<a href='javascript:void(0)' rel="site-banners" title='View Details' onclick='showSiteDetails("it.html");'><span data-icon='&#xe608;'></span></a>
+											<a href='http://apps.askadmissions.net/it' target='_blank' title='Open Site'><span data-icon='&#xe607;'></span></a>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<div class='site-banner'>
+								<figure>
+									<img src='images/sites/banners/pvids.png' />
+								</figure>
+								<div class='table details'>
+									<div class='table-row'>
+										<div class='table-cell info'>
+											<h4>Personalized Videos</h4>
+											<p>An online video personalization software</p>
+										</div>
+										<div class='table-cell actions'>
+											<a href='javascript:void(0)' rel="site-banners" title='View Details' onclick='showSiteDetails("pvid.html");'><span data-icon='&#xe608;'></span></a>
+											<a href='http://welcometoiowastate.net?fname=John&lname=IsAwesome' target='_blank' title='Open Site'><span data-icon='&#xe607;'></span></a>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<div class='site-banner'>
+								<figure>
+									<img src='images/sites/banners/appreview.png' />
+								</figure>
+								<div class='table details'>
+									<div class='table-row'>
+										<div class='table-cell info'>
+											<h4>Hobsons AppReview</h4>
+											<p>A education application related to prospective student applications</p>
+										</div>
+										<div class='table-cell actions'>
+											<a href='javascript:void(0)' rel="site-banners" title='View Details' onclick='showSiteDetails("appreview.html");'><span data-icon='&#xe608;'></span></a>
+											<a href='http://ar.applyyourself.com' target='_blank' title='Open Site'><span data-icon='&#xe607;'></span></a>
+										</div>
+									</div>
+								</div>
+							</div>
+
+						</article>	<!-- /.sites-full -->
+
+						<!-- Sites - Tiles -->
+						<article class='sites-tile'>
+							<div class='site-tiles blocks'>
+
+								<div class='tile'>
+									<a href='javascript:void(0)' rel="site-banners" title='View Details' onclick='showSiteDetails("attributescript.html");'>
+										<figure>
+											<img src='images/sites/tiles/attributescript.png' />
+											<div class='tile-overlay'></div>
+											<div class='tile-details'>
+												<h4>Field Creation Automator</h4>
+											</div>
+										</figure>
+									</a>
+								</div>
+
+								<div class='tile'>
+									<a href='javascript:void(0)' rel="site-banners" title='View Details' onclick='showSiteDetails("directory.html");'>
+										<figure>
+											<img src='images/sites/tiles/directory.png' />
+											<div class='tile-overlay'></div>
+											<div class='tile-details'>
+												<h4>Internal Dev Directory</h4>
+											</div>
+										</figure>
+									</a>
+								</div>
+
+								<div class='tile'>
+									<a href='javascript:void(0)' rel="site-banners" title='View Details' onclick='showSiteDetails("impgolives.html");'>
+										<figure>
+											<img src='images/sites/tiles/impgolives.png' />
+											<div class='tile-overlay'></div>
+											<div class='tile-details'>
+												<h4>Go-Lives Manager</h4>
+											</div>
+										</figure>
+									</a>
+								</div>
+
+								<div class='tile'>
+									<a href='javascript:void(0)' rel="site-banners" title='View Details' onclick='showSiteDetails("ipCreate.html");'>
+										<figure>
+											<img src='images/sites/tiles/ipCreate.png' />
+											<div class='tile-overlay'></div>
+											<div class='tile-details'>
+												<h4>Interest Page Creator</h4>
+											</div>
+										</figure>
+									</a>
+								</div>
+
+								<div class='tile'>
+									<a href='javascript:void(0)' rel="site-banners" title='View Details' onclick='showSiteDetails("psrewards.html");'>
+										<figure>
+											<img src='images/sites/tiles/pspoints.png' />
+											<div class='tile-overlay'></div>
+											<div class='tile-details'>
+												<h4>Rewards Points Manager</h4>
+											</div>
+										</figure>
+									</a>
+								</div>
+
+								<div class='tile'>
+									<a href='javascript:void(0)' rel="site-banners" title='View Details' onclick='showSiteDetails("votingbooth.html");'>
+										<figure>
+											<img src='images/sites/tiles/votingbooth.png' />
+											<div class='tile-overlay'></div>
+											<div class='tile-details'>
+												<h4>Voting Booth App</h4>
+											</div>
+										</figure>
+									</a>
+								</div>
+
+								<div class='tile'>
+									<a href='javascript:void(0)' rel="site-banners" title='View Details' onclick='showSiteDetails("templateupdate.html");'>
+										<figure>
+											<img src='images/sites/tiles/templateupdates.png' />
+											<div class='tile-overlay'></div>
+											<div class='tile-details'>
+												<h4>Template Updates Dashboard</h4>
+											</div>
+										</figure>
+									</a>
+								</div>
+
+								<div class='tile'>
+									<a href='javascript:void(0)' rel="site-banners" title='View Details' onclick='showSiteDetails("tuneupreport.html");'>
+										<figure>
+											<img src='images/sites/tiles/tuneup.png' />
+											<div class='tile-overlay'></div>
+											<div class='tile-details'>
+												<h4>Tune-Up Report</h4>
+											</div>
+										</figure>
+									</a>
+								</div>
+
+								<div class='tile'>
+									<a href='javascript:void(0)' rel="site-banners" title='View Details' onclick='showSiteDetails("wfa.html");'>
+										<figure>
+											<img src='images/sites/tiles/wfa.png' />
+											<div class='tile-overlay'></div>
+											<div class='tile-details'>
+												<h4>Web Feed Admin</h4>
+											</div>
+										</figure>
+									</a>
+								</div>
+
+								<div class='tile'>
+									<a href='javascript:void(0)' rel="site-banners" title='View Details' onclick='showSiteDetails("cdreport.html");'>
+										<figure>
+											<img src='images/sites/tiles/cdreport.png' />
+											<div class='tile-overlay'></div>
+											<div class='tile-details'>
+												<h4>CD Report</h4>
+											</div>
+										</figure>
+									</a>
+								</div>
+<!--
+								<div class='tile'>
+									<a href='images/sites/fbgame.png' rel="site-tiles" class='fancybox'>
+										<figure>
+											<img src='images/sites/tiles/fbgame.png' />
+											<div class='tile-overlay'></div>
+											<div class='tile-details'>
+												<h4>Facebook Game</h4>
+											</div>
+										</figure>
+									</a>
+								</div>
+-->
+								<div class='tile'>
+									<a href='javascript:void(0)' rel="site-banners" title='View Details' onclick='showSiteDetails("createusers.html");'>
+										<figure>
+											<img src='images/sites/tiles/createusers.png' />
+											<div class='tile-overlay'></div>
+											<div class='tile-details'>
+												<h4>Connect User Creation System</h4>
+											</div>
+										</figure>
+									</a>
+								</div>
+
+								<div class='tile'>
+									<a href='javascript:void(0)' rel="site-banners" title='View Details' onclick='showSiteDetails("hiwirecalendar.html");'>
+										<figure>
+											<img src='images/sites/tiles/hiwirecalendar.png' />
+											<div class='tile-overlay'></div>
+											<div class='tile-details'>
+												<h4>Development Calendar</h4>
+											</div>
+										</figure>
+									</a>
+								</div>
+
+								<div class='tile'>
+									<a href='javascript:void(0)' rel="site-banners" title='View Details' onclick='showSiteDetails("infopage.html");'>
+										<figure>
+											<img src='images/sites/tiles/infopage.png' />
+											<div class='tile-overlay'></div>
+											<div class='tile-details'>
+												<h4>Import/Export Email Manager</h4>
+											</div>
+										</figure>
+									</a>
+								</div>
+
+								<div class='tile'>
+									<a href='javascript:void(0)' rel="site-banners" title='View Details' onclick='showSiteDetails("mcrib.html");'>
+										<figure>
+											<img src='images/sites/tiles/mcrib.png' />
+											<div class='tile-overlay'></div>
+											<div class='tile-details'>
+												<h4>"McRib" Monitor</h4>
+											</div>
+										</figure>
+									</a>
+								</div>
+
+								<div class='tile'>
+									<a href='javascript:void(0)' rel="site-banners" title='View Details' onclick='showSiteDetails("ohs2k.html");'>
+										<figure>
+											<img src='images/sites/tiles/ohs1.png' />
+											<div class='tile-overlay'></div>
+											<div class='tile-details'>
+												<h4>Oakwood High School Ten Year Reunion Site</h4>
+											</div>
+										</figure>
+									</a>
+								</div>
+
+								<div class='tile'>
+									<a href='javascript:void(0)' rel="site-banners" title='View Details' onclick='showSiteDetails("macuoffline.html");'>
+										<figure>
+											<img src='images/sites/tiles/macuoffline.png' />
+											<div class='tile-overlay'></div>
+											<div class='tile-details'>
+												<h4>Offline Web App</h4>
+											</div>
+										</figure>
+									</a>
+								</div>
+
+								<div class='tile'>
+									<a href='javascript:void(0)' rel="site-banners" title='View Details' onclick='showSiteDetails("sqs.html");'>
+										<figure>
+											<img src='images/sites/tiles/sqs.png' />
+											<div class='tile-overlay'></div>
+											<div class='tile-details'>
+												<h4>AWS Queue</h4>
+											</div>
+										</figure>
+									</a>
+								</div>
+
+							</div>
+						</article>	<!-- /.sites-tiles -->
+
+						<article class='other-tiles'>
+							<div class='title'><h4>Non-Web Development Works</h4></div>
+
+							<div class='site-tiles blocks'>
+
+								<div class='tile'>
+									<a href='javascript:void(0)' rel="site-banners" title='View Details' onclick='showSiteDetails("fantasyad1.html");'>
+										<figure>
+											<img src='images/other-work/fantasyad1t.png' />
+											<div class='tile-overlay'></div>
+											<div class='tile-details'>
+												<h4>Ad (2013)</h4>
+											</div>
+										</figure>
+									</a>
+								</div>
+
+								<div class='tile'>
+									<a href='javascript:void(0)' rel="site-banners" title='View Details' onclick='showSiteDetails("fantasyad2.html");'>
+										<figure>
+											<img src='images/other-work/fantasyad2t.png' />
+											<div class='tile-overlay'></div>
+											<div class='tile-details'>
+												<h4>Ad (2014)</h4>
+											</div>
+										</figure>
+									</a>
+								</div>
+
+								<div class='tile'>
+									<a href='javascript:void(0)' rel="site-banners" title='View Details' onclick='showSiteDetails("halloween.html");'>
+										<figure>
+											<img src='images/other-work/halloween1t.jpg' />
+											<div class='tile-overlay'></div>
+											<div class='tile-details'>
+												<h4>Halloween Costume (2013)</h4>
+											</div>
+										</figure>
+									</a>
+								</div>
+<!--
+								<div class='tile'>
+									<a href='javascript:void(0)' rel="site-banners" title='View Details' onclick='showSiteDetails("ohs2k.html");'>
+										<figure>
+											<img src='images/other-work/halloweent.jpg' />
+											<div class='tile-overlay'></div>
+											<div class='tile-details'>
+												<h4>Training Manual (2011)</h4>
+											</div>
+										</figure>
+									</a>
+								</div>
+-->
+							</div>
+						</article>	<!-- /.other-tiles -->
+
+						<!-- Recognition -->
+						<article id='awards' class='awards scroll-awards'>
+							<div class='title'>
+								<h3>Recognition</h3>
+								<h4>What They See</h4>
+							</div>
+
+							<div class='award-tiles blocks'>
+								<div class='tile'>
+									<div class='img'><img src='images/awards/hoscar.jpg' /></div>
+									<div class='desc'>
+										<h4>Employee of the Year</h4>
+										<h5>Hobsons Higher Education</h5>
+										<h5>2013</h5>
+									</div>
+								</div>
+								<div class='tile'>
+									<div class='img'><img src='images/awards/hobsons.png' /></div>
+									<div class='desc'>
+										<h4>Employee of the Year nomination</h4>
+										<h5>Hobsons EMT</h5>
+										<h5>2008</h5>
+									</div>
+								</div>
+								<div class='tile'>
+									<div class='img'><img src='images/awards/halloween.jpg' /></div>
+									<div class='desc'>
+										<h4>Most Original/Creative Costume</h4>
+										<h5>Hobsons</h5>
+										<h5>Halloween 2011</h5>
+									</div>
+								</div>
+								<div class='tile'>
+									<div class='img'><img src='images/awards/typing.jpg' /></div>
+									<div class='desc'>
+										<h4>Fastest Typing Speed</h4>
+										<h5>Hobsons</h5>
+										<h5>2011</h5>
+									</div>
+								</div>
+								<div class='tile'>
+									<div class='img'><img src='images/awards/fantasybaseball.png' /></div>
+									<div class='desc'>
+										<h4>Fantasy Baseball Champion</h4>
+										<h5>"World Changers", Hobsons</h5>
+										<h5>2012 - 2013</h5>
+									</div>
+								</div>
+							</div>
+
+						</article>	<!-- /.awards -->
+
+						<!-- Recognition -->
+						<article id='interests' class='interests scroll-interests'>
+							<div class='title'>
+								<h3>Interests</h3>
+								<h4>The Full Picture</h4>
+							</div>
+
+							<div class='interest-tiles blocks'>
+								<div class='tile'>
+									<div class='img'><img src='images/interests/bonsai.png' /></div>
+									<div class='desc'>
+										<h4>Bonsai</h4>
+									</div>
+								</div>
+								<div class='tile'>
+									<div class='img'><img src='images/interests/videogames.png' /></div>
+									<div class='desc'>
+										<h4>Gaming</h4>
+									</div>
+								</div>
+								<div class='tile'>
+									<div class='img'><img src='images/interests/anime.png' /></div>
+									<div class='desc'>
+										<h4>Japanese Anime</h4>
+									</div>
+								</div>
+								<div class='tile'>
+									<div class='img'><img src='images/interests/scifi.png' /></div>
+									<div class='desc'>
+										<h4>Sci Fi</h4>
+									</div>
+								</div>
+								<div class='tile'>
+									<div class='img'><img src='images/interests/baseball.png' /></div>
+									<div class='desc'>
+										<h4>Fantasy Baseball</h4>
+									</div>
+								</div>
+								<div class='tile'>
+									<div class='img'><img src='images/interests/arduino.png' /></div>
+									<div class='desc'>
+										<h4>Electronics</h4>
+									</div>
+								</div>
+								<div class='tile'>
+									<div class='img'><img src='images/interests/travel.png' /></div>
+									<div class='desc'>
+										<h4>Travel</h4>
+									</div>
+								</div>
+								<div class='tile'>
+									<div class='img'><img src='images/interests/american.png' /></div>
+									<div class='desc'>
+										<h4>Early American History</h4>
+									</div>
+								</div>
+							</div>
+						</article>	<!-- /.interests -->
+
+						<!-- Skills -->
+						<article id='skills' class='skills scroll-skills'>
+							<div class='title'>
+								<h3>Skills</h3>
+								<h4>How I Do It</h4>
+							</div>
+
+							<div class='instructions'>Click a part of the graph to learn more</div>
+							<div class='skill-table'>
+								<div class='skill-row'>
+									<div class='skill-cell'>
+										<div class='skill-graph'></div>
+									</div>
+								</div>
+							</div>
+
+							<div class='skill-mobile'>
+								<div class='badge-mobile'>
+									<img src='images/skills/badge-full.png' />
+								</div>
+								<div class='skill-list-mobile'>
+									<div class='skill-block'>
+										<h5>Development</h5>
+										<ul>
+											<li>HTML5</li>
+											<li>Javascript</li>
+											<li>PHP</li>
+											<li>AJAX</li>
+											<li>jQuery</li>
+											<li>Canvas / SVG</li>
+										</ul>
+									</div>
+									<div class='skill-block'>
+										<h5>Integration</h5>
+										<ul class='skill-list'>
+											<li>Web Services</li>
+											<li>SOAP / RESTful</li>
+											<li>AWS</li>
+											<li>Headless Browser</li>
+											<li>Automation</li>
+											<li>Website Scraping</li>
+											<li>Monitoring</li>
+										</ul>
+									</div>
+									<div class='skill-block'>
+										<h5>Design</h5>
+										<ul class='skill-list'>
+											<li>CSS3</li>
+											<li>Responsive Design</li>
+											<li>Media Queries</li>
+											<li>Parallax Scroll</li>
+											<li>CSS Animations</li>
+										</ul>
+									</div>
+									<div class='skill-block'>
+										<h5>Database</h5>
+										<ul class='skill-list'>
+											<li>MySQL</li>
+											<li>Normalization</li>
+											<li>XML</li>
+											<li>JSON</li>
+										</ul>
+									</div>
+									<div class='skill-block'>
+										<h5>Projects</h5>
+										<ul class='skill-list'>
+											<li>Project Management</li>
+											<li>Team Structure</li>
+											<li>Project Design</li>
+										</ul>
+									</div>
+									<div class='skill-block'>
+										<h5>Content Management</h5>
+										<ul class='skill-list'>
+											<li>Wordpress</li>
+											<li>WP Templates</li>
+											<li>WP Plugins</li>
+											<li>Joomla!</li>
+											<li>Joomla! Alternate Layouts</li>
+											<li>Joomla! Custom Menu Types</li>
+											<li>Joomla! Modules</li>
+										</ul>
+									</div>
+									<div class='skill-block'>
+										<h5>Other</h5>
+										<ul class='skill-list'>
+											<li>Fast Typer</li>
+											<li>Innovative</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</article>
+
+						<!-- Timeline -->
+						<article id='timeline' class='timeline scroll-timeline'>
+							<div class='title'>
+								<h3>Timeline</h3>
+								<h4>Where I've Been</h4>
+							</div>
+
+							<div class='timeline-container'>
+								<div class='timeline-items'>
+									<div>
+										<!--<div class='img'><img src='images/timeline/born.jpg' /></div>-->
+										<div class='year'>1985</div>
+										<div class='desc'><div>Born</div></div>
+									</div>
+									<div>
+										<div class='year'>1999</div>
+										<div class='desc'><div>High School</div></div>
+									</div>
+									<div>
+										<div class='year'>2003</div>
+										<div class='desc'><div>College</div></div>
+									</div>
+									<div>
+										<div class='year'>2007</div>
+										<div class='desc'><div>Hobsons</div></div>
+										<!--<div class='img'><img src='images/timeline/hobsons.png' /></div>-->
+									</div>
+									<div>
+										<div class='year'>2009</div>
+										<div class='desc'><div>Senior FED</div></div>
+									</div>
+									<div>
+										<div class='year'>2010</div>
+										<div class='desc'><div>Template Updates</div></div>
+									</div>
+									<div>
+										<div class='year'>2011</div>
+										<div class='desc'><div>Internal Development</div></div>
+									</div>
+									<div>
+										<div class='year'>2013</div>
+										<div class='desc'><div>H'Oscar</div></div>
+									</div>
+									<div>
+										<div class='year'>2013</div>
+										<div class='desc'><div>Media Services</div></div>
+									</div>
+								</div>
+							</div>
+						</article>	<!-- /.timeline -->
+					</section>	<!-- /#portfolio -->
+
+					<!-- Portfolio -->
+					<section id='game'>
+
+						<article class='game scroll-game'>
+							<!--<div class='overlay'>-->
+								<div class='game-container'>
+									<div class='before-game-screen'>
+										<div class='start-screen'>
+											<a class='start-button'>
+												Start
+											</a>
+											<div class='start-sub'>
+												An HTML5 game<br/>Inspired by "Pong"<br/>Written by John L. Erdei<br/><br/>Built for mouse-based input.
+											</div>
+										</div>
+									</div>
+									<div class='before-game-instructions' style='display:none'>
+										<div class='start-instructions'>
+											<h4>Good Luck!</h4>
+
+											<p>In this game, you control both the <strong>top</strong> and <strong>bottom</strong> paddle. Stop the ball from getting past them!</p>
+											<p>The ball's <strong>trajectory</strong> and <strong>speed</strong> is randomly adjusted at each colission.</p>
+											<p>Every 10 hits, the paddles get <strong>smaller</strong> and the ball gets <strong>smaller and faster</strong></p>
+										</div>
+										<div class='start-button'>Start Game</div>
+									</div>
+								</div>
+							<!--</div>-->
+						</article>	<!-- /.game -->
+
+					</section>	<!-- /#game -->
+
+					<!-- Contact -->
+					<section id='contact'>
+
+						<article class='contact scroll-contact table'>
+							<div class='table-row'>
+								<div class='cta table-cell'>
+									<p>Like What You See?</p>
+									<p>Want More Information?</p>
+									<p><strong>Contact Me Now!</strong></p>
+									<p><small>Before someone else does...</small></p>
+								</div>
+								<form id='contact-form' class='contact-form table-cell' method='post' action='index.html' onsubmit='contactForm(); return false;'>
+									<div class='row'>
+										<input type='text' name='name' placeholder='Your Name' required />
+									</div>
+									<div class='row'>
+										<input type='email' name='email' placeholder='Your E-Mail Address' required />
+									</div>
+									<div class='row'>
+										<input type='text' name='company' placeholder='Your Company or Site' />
+									</div>
+									<div class='row'>
+										<textarea name='message' placeholder='Your Message' required></textarea>
+									</div>
+									<div class='row submit-row'>
+										<img src='images/load.gif' class='working' style='display:none' />
+										<div class='success' style='display:none'>
+											<span data-icon='&#xe116;'></span> Message Sent Successfully
+										</div>
+										<div class='error' style='display:none'>
+											<span data-icon='&#xf081;'></span> There was a problem sending your message. Please try again.
+										</div>
+
+										 <input type='submit' value='Send Message' />
+									</div>
+								</form>
+							</div>
+						</article>	<!-- /.contact -->
+					</section>	<!-- /#contact -->
+
+					<!-- Top border "gradient" -->
+					<div class='top-border-container'><div class='top-border-cell'></div><div class='top-border-cell'></div><div class='top-border-cell'></div><div class='top-border-cell'></div><div class='top-border-cell'></div></div>
+
+				</div>	<!-- /#main-content-area -->
+			</div> <!-- /#main-container -->
+
+			<!-- Bottom Image -->
+			<div id='bottom-image' class='parallax'><div class='overlay'>
+				<footer id='cp'>
+					<div>&copy; 2014 John L. Erdei</div>
+					<div>This responsive <abbr>HTML5</abbr> site was created by John L. Erdei and uses <abbr>CSS3</abbr>, Javascript, AJAX, jQuery, jQuery.scrollTo, jQuery.easing, jQuery.radarbadge, jQuery.bxslider, and Google Fonts</div>
+				</footer>
+			</div></div>
+
+		</div>
+
+	</body>
+</html>
