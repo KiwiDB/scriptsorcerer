@@ -1872,6 +1872,10 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f7f9de', end
 		padding: 20px 20px 50px;
 	}
 
+	.scrolldown {
+		display: none;
+	}
+
 	.titlecard h1
 	{
 		color: black;
