@@ -70,11 +70,11 @@ if($img && ($width || $height))
 	//header('Content-Type: image/png');
 	//imagepng($img_r, null, 9);
 
-	//header('Content-Type: image/jpeg');
-	//imagejpeg($img_r, null, 100);
+	header('Content-Type: image/jpeg');
+	imagejpeg($img_r, null, 100);
 
-	header('Content-Type: image/gif');
-	imagegif($img_r);
+	//header('Content-Type: image/gif');
+	//imagegif($img_r);
 
 	imagedestroy($img);
 	imagedestroy($img_r);
