@@ -1265,6 +1265,10 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f7f9de', end
     margin: 30px 0 0;
 }
 
+.site-details p {
+	margin: 0;
+}
+
 .site-popup-thumb-column ul
 {
 	font-size: 0.9em;
@@ -1426,6 +1430,11 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f7f9de', end
 {
 	margin: 0;
 	color: #999;
+}
+
+.titlecard h3 a {
+	color:  #34799E;
+	text-decoration: underline;
 }
 
 .titlecard .externallinks
@@ -2296,6 +2305,10 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f7f9de', end
 
 	nav ul.menu-items li:nth-child(8)
 	{
+		display: none!important;
+	}
+
+	#mobile-menu > ul > li:nth-child(9) {
 		display: none!important;
 	}
 }
