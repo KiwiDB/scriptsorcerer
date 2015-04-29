@@ -1,0 +1,49 @@
+<div class='project-details'>
+	<div class='headerArea'>
+		<h1>Web Application Development</h1>
+
+		<p>Simple websites were the beginning of my path -- starting with HTML, adding backend processing, databases, javascript, CSS, AJAX, libraries, whatever it took to carry out the needs of the project. Today my expertise is wide-ranging. Choose an example below to read more.</p>
+
+		<ul class='bullets'>
+			<li><a href='javascript:void(0)' onclick='showProjectDetails("bsbuild")' class='link-bsbuild link-active'>Bootstrap Build</a></li>
+			<li><a href='javascript:void(0)' onclick='showProjectDetails("mediaservices")' class='link-mediaservices'>Digital Marketing Websites</a></li>
+			<li><a href='javascript:void(0)' onclick='showProjectDetails("reunion")' class='link-reunion'>Reunion Website</a></li>
+		</ul>
+	</div>
+
+
+	<div class='contentArea'>
+		<div id='content-bsbuild' class='content-section content-displaying'>
+			<p>The Bootstrap Build website is a tool I own and built as a supplement for webmasters who use Twitter Bootstrap elements in their own projects. Bootstrap provides for some great prebuilt elements, but customizing them for real-life use is a little more complicated.</p>
+
+			<p>The site uses a wizard-style interface to customize Bootstrap HTML based on the answers to relevant questions. Once an HTML block is generated, an on-site preview is generated along with the HTML itself, ready to be copied and used as desired. So far the site provides two generators, with more currently in development.</p>
+
+			<p>I am the sole contributor to this site -- webmaster, developer, designer, marketer, site security, etc. Most of the code associated with the site is available in my github account, altho the files with private or security information (mostly the PHP) is not tracked.</p>
+		</div>
+		<div id='content-mediaservices' class='content-section content-displaying' style='display:none'>
+			<ul class='summary'>
+				<li>Builds all new client sites and maintains 20+ existing sites.</li>
+				<li>Advanced Joomla concepts, including custom menu item types and custom module types.</li>
+				<li>Designed and built robust, AWS-integrated zero-loss submission management system.</li>
+				<li>Trained junior design team in website concepts.</li>
+			</ul>
+
+			<p>In 2013 I joined the Media Services team (a digital marketing team) at Hobsons, as developer. One of my major responsibilities on the team is the building and maintenance of marketing websites used by the greater team to generate contacts. These websites collect leads and submit them to different systems (the CRM this team uses internally, CRMs used by clients, different sales and marketing tools, along with emails and CSV exports). Before I took over responsibility for these sites, they were a mess. The process and technologies needed a full redesign, which I undertook:</p>
+	
+			<ul>
+				<li><strong>Design Team.</strong> Together with the Media Services team leadership, we introduced a true design team to te mix. These were junior designers from elsewhere in the company (who, until this point, concentrated on print design). I worked with them to teach web design concepts. The designers were to be responsible for creating mockups, and starting the HTML build process before sending it and the site resources (images, fonts, etc) to me.</li>
+
+				<li><strong>Website Backend.</strong> For years before I joined the process, our sites have been built using Joomla -- but only in the most academic sense. Few of the advantages a CMS provides were used in any way. I rethought and restructured the way our sites are built, introduced basic templates, modules and menus, along with more advanced concepts like custom menu item types and custom module types</li>
+
+				<li><strong>Website Frontend.</strong> Our websites need to meet many requirements -- functional, fast, easily maintainable, maintainable by a team of individuals, representable in Joomla, and able to fit into the process of splitting design and build between two teams. I added two vital technologies to the sites: Twitter Bootstrap, which allows us to use standard elements, quick prototyping, and standardization for maintenance; and LESS CSS, making it easier to keep stylesheets organized and syntactically readable. We also pushed our sites to be fully responsive.</li>
+
+				<li><strong>Submission Manager.</strong> The whole point of these sites is to generate leads through the on-site contact form. These leads need to be processed and submitted to any number of remote systems. The real-time processing code that was in place was error-prone, costly, and time consuming. I built a whole new system for dealing with submission, emphasising automation, self-correction and transparency. The new system uses an AWS SQS queue to store leads, and periodically submits them through to the appropriate endpoints by reading from configuration files. If a system goes down, the lead is left in the queue and submission is reattempted periodically until successful. All processes are logged and viewable by the administering team. (See more details about this system in the Web Applications section.)</li>
+			</ul>
+		</div>
+		<div id='content-reunion' class='content-section content-displaying' style='display:none'>
+			<p>My high school reunion was a few years ago, and I had the honor of building an informational and contact website for the event. The site used a flat design style and elements received after contacting the school. It integrated Google Maps for directions to the event, and a contact form which passed messages off to the event planning group. The site also provided access to the Facebook group for the event.</p>
+
+			<p>This site and domain are no longer active.</p>
+		</div>
+	</div>
+</div>

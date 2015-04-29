@@ -1,0 +1,73 @@
+<div class='project-details'>
+	<div class='headerArea'>
+		<h1>Web Application Development</h1>
+
+		<p>My application development experience has led me to be a part of many interesting and significant projects. Choose an example below to read more.</p>
+
+		<ul class='bullets'>
+			<li><a href='javascript:void(0)' onclick='showProjectDetails("template-update")' class='link-template-update link-active'>Template Update Team</a></li>
+			<li><a href='javascript:void(0)' onclick='showProjectDetails("internal-dev")' class='link-internal-dev'>Internal Development Team</a></li>
+			<li><a href='javascript:void(0)' onclick='showProjectDetails("submission-management")' class='link-submission-management'>Submission Management System</a></li>
+			<li><a href='javascript:void(0)' onclick='showProjectDetails("pvids")' class='link-pvids'>Personalized Videos</a></li>
+			<li><a href='javascript:void(0)' onclick='showProjectDetails("offline-app")' class='link-offline-app'>Offline Web App</a></li>
+		</ul>
+	</div>
+
+
+	<div class='contentArea'>
+		<div id='content-template-update' class='content-section content-displaying'>
+			<ul class='summary'>
+				<li>Overhaul of the code base for 4 products and 700+ clients.</li>
+				<li>Lead an international, 10-12 person team.</li>
+				<li>Designed and executed the process, including a custom-built project dashboard.</li>
+				<li>Primarily XSL, Javascript, HTML, CSS.</li>
+				<li>Completed ahead of expectations.</li>
+			</ul>
+
+			<p>The development team at Hobsons undertook the task of updating the code base for several of our products. The primary emphasis of this project was a refresh of the frontends, which had become fairly antiquated and hard to use. As the senior front-end developer at the time, I was given the task of running the team responsible for doing these upgrades. The size of my team varied as the process went on, maxing out at 12 (half of whom were in India). I was given complete control of the process, handed only a team, a goal and an end date as guidance. We had more than 700 clients in three countries, each of which had infinite instances of up to four different products. The old code base could not be retained in its current form, so each instance had to be rebuilt using the new code.</p>
+
+			<p>I split the team into three sub-teams (design, development and move/QA), and developed a custom-built dashboard for reporting, automated communication and team progress purposes. The team built the new implementation on a dev server, and we were able to take advantage of the Indian timezone to move the new code live off-hours.</p>
+
+			<p>In addition to leading the team, I also took on the role of main developer; I was the most familiar with the code on these sites because I wrote most of it to begin with. While creating the new version of these pages, I furthered developed our custom-written frontend framework in order to create sleek, reusable code for the common tasks our pages need.</p>
+
+			<p>While we were doing the project, I also found myself having to deal with a QA project of sorts. It turns out that the code base we're working with (which was written by a different team) was not QAed well, and we were constantly uncovering faults that needed to be fixed before we could move forward. When a client couldn't be moved, it would affect the schedule (since that client would need to be moved to another day which already had a full schedule). This is a process that I managed as well -- what is the fault, who needs to be notified, which clients does this affect and how does the schedule need to change as a result, as well as following up on existing issues.</p>
+
+			<p>It was bumpy at times, but thanks in part to the flexibility allowed by the team structure and process I created, we finished the project on time, and the product set up we created during the updates are still in use today.</p>
+		</div>
+		<div id='content-internal-dev' class='content-section' style='display:none'>
+			<ul class='summary'>
+				<li>Developer for a small team concentrating on internal processes, automation and integration.</li>
+				<li>Self-driven projects -- investigated, designed, implemented, released and maintained by me.</li>
+				<li>Worked on projects for a wide variety of teams.</li>
+				<li>Primarily, HTML/CSS/Javscript, PHP, MySQL, RESTful and SOAP APIs</li>
+			</ul>
+
+			<p>For a couple years, I had the primary responsibility of creating internal applications to be used by teams at Hobsons in doing their jobs. This was a task that I took up on my own, as a side job of sorts, and eventually turned into an official team. I was the only full-time member of this team, so the whole process was left to me -- I investigated and researched needs in the company, gathered requirements from the involved parties, designed and developed the system, tested it, released it and maintained it post-release. Technologies, languages, workflows, all were my doing. The team was very successful, and produced many systems, including:
+
+				<ul>
+					<li><strong>Form Builder.</strong> One of the most important products Hobsons sells is a contact form for clients websites. It is one part of a large CRM, integrated fully with and built through the CRM’s web interface. As the company and team size grew, the interface became very inefficient. I wrote an alternate interface built specifically to the needs of the team. It begins with default form fields or can read data from an Excel document. A full drag-and-drop interface follows, which allows the form to be built or updated. These forms can be saved and loaded internally, and shared with clients in read-only and editable formats. The application uses a combination of web services and webpage scraping to gather information from the full system and to submit the new form to the system.</li>
+					<li><strong>Attribute Scripts.</strong> A primary element of the CRM are attributes -- fields into which data for a record is saved (“First Name”, “Email”, etc). Attributes are created in one of two ways: one at a time through the CRM’s web interface, or with a built in script that requires very complicated XML in order to work. I created an automated attribute script submission tool, which reads new attribute information from simple Excel documents and submits them to the system. The data from the Excel document is validated before run, providing simple messages. This application allows clients to create or run their own attribute creation scripts, instead of having to send a request and wait for Hobsons employees to build the XML and submit it to the CRM.</li>
+					<li><strong>Client Information and Go-Live Manager.</strong> Traditionally client go-live information and custom setups were stored in a series of Excel spreadsheets and Word docuemnts -- there was no central location for this information. In conjunction with the implementation teams, I wrote a system for collecting, holding and accessing this information. The main access interface is integrated into our Jive-based intranet.</li>
+					<li><strong>Tune-Up Report.</strong> Our CRM keeps a lot of data, but analyzing it for actionable information or optimization was tough, if not impossible. This application accessed the system’s database to pull various pieces of information for account managers.</li>
+				</ul>
+			</p>
+		</div>
+		<div id='content-submission-management' class='content-section' style='display:none'>
+			<p>As part of an overhaul of the lead generating websites I build/maintain as part of the Media Services team at Hobsons, I set my sights on the poor handling of submissions through the contact form on these pages. The new system I built to manage these submissions needed to be robust (no possibility of loss), self-healing (needs to act automatically when external systems go down), and transparent (we need to be able to see what it’s doing and what it’s done at any time).</p>
+
+			<p>The hinge in the system is an AWS SQS queue. When a contact is submitted through one of the websites, it is immediately placed in the SQS queue; the process connected to the website ends with this simple task, and the rest is done with a daemon running independently.</p>
+
+			<p>The daemon periodically pulls all contacts sitting in the queue and processes them. Each client has a JSON-configuration file which specifies where and how to submit contacts; these configuration files and the contacts from the queue are read by a large, object oriented PHP application I wrote. Each integration point (CRMs, sales tools, marketing tools, etc) is a class inheriting from a single abstract class. Writing the code this way makes maintenance very simple; adding a new submission end point is as simple as creating a new class with four public functions defined. This application also handles contact validation, external data lookups and automated communications.</p>
+		</div>
+		<div id='content-pvids' class='content-section' style='display:none'>
+			<p>“Personalized Videos” are videos we or which clients create with placeholders for personalized information -- displaying a person’s name on a banner announcing their acceptable college, for example. The application generated these personalizations was written a decade earlier, and relied on Flash. As no-Flash mobile devices became more important, we undertook a project to rewrite the application not to need Flash; I was brought into the project as developer.</p>
+
+			<p>The resulting system relies on AWS and PHP’s GD library. Personalized videos can be prerendered or rendered in real-time; requests to render a video first enter an AWS SQS queue, where a daemon picks them up. The daemon pulls in a per-client XML-based configuration file, and uses PHP to generate the frames for the personalized sections of the video. These frames are stitched together using ffmpeg and sent to an AWS S3 server for long-term storage. At the same time, the personalized video pieces are combined with the non-personalized portions of the video and the audio to produce an mp4 file which is stored locally short-term and returned to the browser.</p>
+		</div>
+		<div id='content-offline-app' class='content-section' style='display:none'>
+			<p>An in-personal lead generation team (which works at recruitment events) was in need of an easy way to collect leads and submit them to our CRM without wanting to manually enter them at a later time. They also wanted to give outside individuals the ability to register themselves electronically. The main issue was that internet access in these situations was spotty at best.</p>
+
+			<p>I solved this issue by writing an offline-enabled web-based application which was capable of storing leads locally and one-click submitting them when an internet connection is available. The app makes use of HTML5’s local storage as an alternative to cookies, and is available offline by leveraging HTML5’s application cache functionality. When submission is possible, the application integrates with the <a href='javascript:void(0)' onclick='showProjectDetails("content-submission-management")'>Submission Management System</a>.</p>
+		</div>
+	</div>
+</div>
