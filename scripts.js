@@ -6,6 +6,10 @@ var pos = {};
 var popupSize = {};
 var loadtime = 0;
 
+//Used so that resize doesn't run too often on scroll
+var scrollTimer = false;
+
+
 //These are the elements that need to load/run before the site will display
 var pl = {
 	"load": {
@@ -136,7 +140,7 @@ function init()
 	windowSize.h = window.innerHeight;
 
 	window.onresize = resizeSet;
-	resizeSet();
+	resizeSet(true);
 
 	window.onscroll = imgSet;
 	//imgSet();		<-- Called from within resizeSet
@@ -158,7 +162,7 @@ function init()
 }
 
 //Runs whenever the window is resized
-function resizeSet()
+function resizeSet(cont)
 {
 	windowSize.w = window.innerWidth;
 	windowSize.h = window.innerHeight;
@@ -179,15 +183,22 @@ function resizeSet()
 	//Set the resize element as loaded (initial page load)
 	pl["resize"].loaded = true;
 
-	imgSet();
+	if(cont)
+		imgSet(false);
 }
 
 //Runs whenever the browser is scrolled (controls parallax effect)
-function imgSet()
+function imgSet(cont)
 {
 	//If we're disabled parallax -- there's nothing to do here
 	if(!stopParallax)
 	{
+		if(cont)
+		{
+			clearTimeout(scrollTimer);
+			scrollTimer = setTimeout("resizeSet(false);", 50);
+		}
+
 		var sp = getScrollXY();
 		var bt = (startBottom - (startBottom - sp[1]/2));
 
@@ -251,7 +262,9 @@ function displayPage()
 	for(i in pl)
 	{
 		if(pl[i].loaded == false)
+		{
 			ready = false;
+		}
 	}
 
 	//If we're ready (cut off at 100 tries, 10 seconds, in case something goes wrong)
@@ -570,6 +583,80 @@ function siteDetailsImageOpen(i)
 function closeSiteDetailsImg()
 {
 	$("#popup_gal_open").fadeOut(function(){$(this).html("");});
+}
+
+//Display the dialog for projects
+function showProject(s)
+{
+	//Overlay
+	var o = $(document.createElement("div"));
+	o.attr("id", "site-details-overlay");
+	o.attr("class", "site-overlay");
+	o.bind("click", closeSiteDetails);
+	o.css("display", "none");
+
+	$("body").addClass("noscroll");
+	$("body").append(o);
+
+	//Loading animation
+	var loading = $(document.createElement("div"));
+	loading.attr("class", "loading-popup");
+	loading.html("<img src='images/load.gif' />");
+	loading.css("display", "none");
+
+	$("body").append(loading);
+	$(".loading-popup").fadeIn();
+	$("#site-details-overlay").fadeIn();
+
+	//Grab the detail content
+	$.ajax(
+	{
+		url: "descriptions/projects/" + s,
+		dataType: "html",
+		success: function(data)
+		{
+			var content = "<div class='popup_content'>" + data + "</div>";
+			content += "<div id='popup_close' onclick='closeSiteDetails()'><span class='close-big'>X</span><span class='close-small'>[close]</span></div>";
+			content += "<div id='popup_gal_open' style='display:none' onclick='closeSiteDetailsImg()'></div>";
+
+			//Popup
+			var p = $(document.createElement("div"));
+			p.attr("id", "site-details");
+			p.attr("class", "site-details");
+			p.html(content);
+
+			var w = windowSize.w * 0.9;
+			w = (w > 1200 ? 1200 : w);
+
+			var h = windowSize.h * 0.9;
+			h = (h > 800 ? 800 : h);
+
+			var t = (windowSize.h - h) / 2;
+			var l = (windowSize.w - w) / 2;
+
+			p.css("width", w + "px");
+			p.css("height", h + "px");
+			p.css("top", t + "px");
+			p.css("left", l + "px");
+
+			popupSize = {w: w, h: h};
+
+			//Fade
+			p.css("display", "none");
+			$("body").append(p);
+			$(".loading-popup").stop().fadeOut(function() { $(this).remove(); });
+			$("#site-details").fadeIn();
+		}
+	})
+}
+
+function showProjectDetails(id)
+{
+	$(".project-details .content-section.content-displaying").removeClass("content-displaying").fadeOut("fast", function() {
+		$(".link-active").removeClass("link-active");
+		$("#content-" + id).fadeIn("fast").addClass("content-displaying");
+		$(".link-" + id).addClass("link-active");
+	});
 }
 
 //Submit the contact form
